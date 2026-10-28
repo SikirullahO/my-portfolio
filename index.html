@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+      Sikirullah Olamide — Full-Stack Developer | Aspiring AI Engineer
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Sikirullah Olamide, a Computer Science student at Ahmadu Bello University building practical web applications and exploring AI engineering: LLM apps, RAG, and AI agents."
+    />
+    <meta name="author" content="Sikirullah Olamide" />
+    <meta name="theme-color" content="#0a0f1d" />
+    <meta name="color-scheme" content="dark light" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Sikirullah Olamide — Full-Stack Developer | Aspiring AI Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Building practical web applications and exploring AI engineering: LLM apps, RAG, and AI agents."
+    />
+    <meta
+      property="og:url"
+      content="https://sikirullaho.github.io/portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://sikirullaho.github.io/portfolio/assets/images/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Sikirullah Olamide — Full-Stack Developer and Aspiring AI Engineer"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+    <!-- Fonts: Inter + JetBrains Mono. System fonts are used automatically if these fail to load. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      (function () {
+        var rootElement = document.documentElement;
+        try {
+          var savedTheme = localStorage.getItem("theme");
+          if (savedTheme === "light" || savedTheme === "dark") {
+            rootElement.setAttribute("data-theme", savedTheme);
+          }
+        } catch (storageError) {
+          /* storage blocked: keep the default theme */
+        }
+      })();
+    </script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ================= Header / Navigation ================= -->
+    <header class="site-header" id="site-header">
+      <nav class="nav container" aria-label="Primary">
+        <a class="nav__brand" href="#home">
+          <span class="nav__logo" aria-hidden="true">SO</span>
+          <span class="nav__name">Sikirullah Olamide</span>
+        </a>
+
+        <ul class="nav__menu" id="nav-menu">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#journey">Learning Journey</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+          <li>
+            <a
+              class="nav__github"
+              href="https://github.com/SikirullahO"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="icon icon--fill"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+                />
+              </svg>
+              <span
+                >GitHub<span class="visually-hidden">
+                  (opens in a new tab)</span
+                ></span
+              >
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav__actions">
+          <button
+            class="icon-btn theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Switch to light theme"
+          >
+            <svg
+              class="icon icon-sun"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+              />
+            </svg>
+            <svg
+              class="icon icon-moon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z" />
+            </svg>
+          </button>
+          <button
+            class="icon-btn nav__toggle"
+            id="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Open menu"
+          >
+            <span class="nav__toggle-bar" aria-hidden="true"></span>
+            <span class="nav__toggle-bar" aria-hidden="true"></span>
+            <span class="nav__toggle-bar" aria-hidden="true"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ================= Hero ================= -->
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="hero__eyebrow">
+              <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+              Computer Science student · Ahmadu Bello University
+            </p>
+            <p class="hero__greeting">Hi there, I'm</p>
+            <h1 class="hero__title" id="hero-title">Sikirullah Olamide</h1>
+            <p class="hero__headline">
+              Full-Stack Developer
+              <span class="hero__divider" aria-hidden="true">|</span> Aspiring
+              AI Engineer
+            </p>
+            <p class="hero__intro">
+              I build practical web applications, from responsive interfaces to
+              backend APIs, and I'm exploring how LLMs, retrieval, and agents
+              can make software genuinely more useful.
+            </p>
+            <div class="hero__ctas">
+              <a class="btn btn--primary" href="#projects">
+                Explore My Projects
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <a class="btn btn--ghost" href="#contact">Get in Touch</a>
+            </div>
+            <a
+              class="hero__github"
+              href="https://github.com/SikirullahO"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="icon icon--fill"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+                />
+              </svg>
+              <span
+                >github.com/SikirullahO<span class="visually-hidden">
+                  (my GitHub profile, opens in a new tab)</span
+                ></span
+              >
+            </a>
+          </div>
+
+          <!-- Decorative: connected-node network behind a small code window -->
+          <div class="hero__visual" aria-hidden="true">
+            <svg class="hero__network" viewBox="0 0 400 400" focusable="false">
+              <g class="network__lines">
+                <path
+                  d="M60 80 L170 40 L300 70 L360 170 L310 300 L190 350 L70 300 L30 190 Z"
+                />
+                <path
+                  d="M170 40 L200 200 L300 70 M200 200 L360 170 M200 200 L310 300 M200 200 L190 350 M200 200 L70 300 M200 200 L30 190 M200 200 L60 80"
+                />
+              </g>
+              <g class="network__nodes">
+                <circle cx="60" cy="80" r="5" />
+                <circle cx="170" cy="40" r="4" />
+                <circle class="network__node--pulse" cx="300" cy="70" r="6" />
+                <circle cx="360" cy="170" r="4" />
+                <circle class="network__node--alt" cx="310" cy="300" r="5" />
+                <circle cx="190" cy="350" r="4" />
+                <circle
+                  class="network__node--pulse network__node--delay"
+                  cx="70"
+                  cy="300"
+                  r="5"
+                />
+                <circle class="network__node--alt" cx="30" cy="190" r="4" />
+                <circle class="network__node--core" cx="200" cy="200" r="9" />
+              </g>
+            </svg>
+
+            <div class="code-card">
+              <div class="code-card__bar">
+                <span class="code-card__dot"></span>
+                <span class="code-card__dot"></span>
+                <span class="code-card__dot"></span>
+                <span class="code-card__file">about_me.py</span>
+              </div>
+              <pre
+                class="code-card__body"
+              ><code><span class="tk-v">me</span> = <span class="tk-f">Developer</span>(
+    <span class="tk-k">name</span>=<span class="tk-s">"Sikirullah"</span>,
+    <span class="tk-k">builds</span>=[<span class="tk-s">"web apps"</span>, <span class="tk-s">"APIs"</span>],
+    <span class="tk-k">exploring</span>=[<span class="tk-s">"RAG"</span>, <span class="tk-s">"agents"</span>],
+)
+
+<span class="tk-c"># the plan, on repeat</span>
+<span class="tk-kw">while</span> <span class="tk-v">me</span>.learning:
+    <span class="tk-v">me</span>.<span class="tk-f">build</span>()
+    <span class="tk-v">me</span>.<span class="tk-f">ship</span>()<span class="code-card__cursor"></span></code></pre>
+            </div>
+
+            <span class="hero__chip hero__chip--one">FastAPI</span>
+            <span class="hero__chip hero__chip--two">RAG</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= About ================= -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-eyebrow">
+              <span aria-hidden="true">01 /</span> About
+            </p>
+            <h2 class="section-title" id="about-title">A little about me</h2>
+          </header>
+
+          <div class="about__grid">
+            <div class="about__text reveal">
+              <p>
+                I'm a
+                <strong
+                  >Computer Science student at Ahmadu Bello University</strong
+                >, Nigeria. I started learning software development in 2023,
+                beginning with full-stack web development: building pages,
+                wiring up interactivity, and slowly figuring out how the
+                frontend and backend fit together.
+              </p>
+              <p>
+                That foundation taught me to think about the whole application:
+                how an interface feels to use, how an API is shaped, and how
+                data moves between them. I've worked with JavaScript, React and
+                Node.js, and more recently with Python and FastAPI.
+              </p>
+              <p>
+                Lately I've been drawn to <strong>AI engineering</strong>,
+                especially the practical side: how LLM APIs fit into real
+                applications, how retrieval keeps answers grounded in source
+                material, and how agents can use tools in controlled,
+                predictable ways.
+              </p>
+              <p>
+                My goal is simple: write software that is reliable and genuinely
+                useful, and keep getting better at the engineering habits that
+                make it so: testing, documentation, and clear design.
+              </p>
+            </div>
+
+            <aside class="facts-card reveal" aria-label="Quick facts">
+              <dl class="facts">
+                <div class="facts__row">
+                  <dt>Studying</dt>
+                  <dd>B.Sc. Computer Science, Ahmadu Bello University</dd>
+                </div>
+                <div class="facts__row">
+                  <dt>Coding since</dt>
+                  <dd>2023, starting with full-stack web development</dd>
+                </div>
+                <div class="facts__row">
+                  <dt>Building</dt>
+                  <dd>Web applications and backend APIs</dd>
+                </div>
+                <div class="facts__row">
+                  <dt>Exploring</dt>
+                  <dd>LLM applications, RAG and AI agents</dd>
+                </div>
+              </dl>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Skills =================
+         To edit skills: add, remove or rename <li class="tag"> items below.
+         For something you're still learning, use:
+         <li class="tag tag--learning">Name <span class="tag__badge">learning</span></li>
+    -->
+      <section
+        class="section section--alt"
+        id="skills"
+        aria-labelledby="skills-title"
+      >
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-eyebrow">
+              <span aria-hidden="true">02 /</span> Skills
+            </p>
+            <h2 class="section-title" id="skills-title">Technical skills</h2>
+            <p class="section-lead">
+              The languages, frameworks and tools I work with as I learn and
+              build. Items marked <em>learning</em> are ones I'm actively
+              picking up.
+            </p>
+          </header>
+
+          <div class="skills__grid">
+            <article class="skill-group reveal">
+              <div class="skill-group__header">
+                <span class="skill-group__icon" aria-hidden="true"
+                  ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                    <path d="m8 9-4 3 4 3M16 9l4 3-4 3M13.5 6l-3 12" /></svg
+                ></span>
+                <h3 class="skill-group__title">Languages</h3>
+              </div>
+              <ul class="tag-list">
+                <li class="tag">Python</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+              </ul>
+            </article>
+
+            <article class="skill-group reveal">
+              <div class="skill-group__header">
+                <span class="skill-group__icon" aria-hidden="true"
+                  ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <path d="M3 9h18M9 9v11" /></svg
+                ></span>
+                <h3 class="skill-group__title">Frontend Development</h3>
+              </div>
+              <ul class="tag-list">
+                <li class="tag">React</li>
+                <li class="tag">Next.js</li>
+                <li class="tag">Responsive Web Design</li>
+              </ul>
+            </article>
+
+            <article class="skill-group reveal">
+              <div class="skill-group__header">
+                <span class="skill-group__icon" aria-hidden="true"
+                  ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                    <rect x="4" y="4" width="16" height="7" rx="2" />
+                    <rect x="4" y="13" width="16" height="7" rx="2" />
+                    <path d="M8 7.5h.01M8 16.5h.01" /></svg
+                ></span>
+                <h3 class="skill-group__title">Backend Development</h3>
+              </div>
+              <ul class="tag-list">
+                <li class="tag">FastAPI</li>
+                <li class="tag">Node.js</li>
+                <li class="tag">Express.js</li>
+                <li class="tag">REST APIs</li>
+              </ul>
+            </article>
+
+            <article class="skill-group reveal">
+              <div class="skill-group__header">
+                <span class="skill-group__icon" aria-hidden="true"
+                  ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                    <path
+                      d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"
+                    />
+                    <path
+                      d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"
+                    /></svg
+                ></span>
+                <h3 class="skill-group__title">AI Engineering</h3>
+              </div>
+              <ul class="tag-list">
+                <li class="tag">OpenAI API</li>
+                <li class="tag">LangChain</li>
+                <li class="tag">LangGraph</li>
+                <li class="tag">AutoGen</li>
+                <li class="tag">Retrieval-Augmented Generation (RAG)</li>
+                <li class="tag">AI Agents</li>
+              </ul>
+            </article>
+
+            <article class="skill-group reveal">
+              <div class="skill-group__header">
+                <span class="skill-group__icon" aria-hidden="true"
+                  ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                    <path d="m12 3 9 5-9 5-9-5z" />
+                    <path d="m3 13 9 5 9-5" /></svg
+                ></span>
+                <h3 class="skill-group__title">Tools &amp; Infrastructure</h3>
+              </div>
+              <ul class="tag-list">
+                <li class="tag">Git</li>
+                <li class="tag">GitHub</li>
+                <li class="tag">Docker</li>
+                <li class="tag tag--learning">
+                  Kubernetes <span class="tag__badge">learning</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Projects =================
+         Project cards are generated from the PROJECTS array in js/script.js.
+    -->
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-eyebrow">
+              <span aria-hidden="true">03 /</span> Projects
+            </p>
+            <h2 class="section-title" id="projects-title">Featured projects</h2>
+            <p class="section-lead">
+              Projects I'm planning and building as I grow from web development
+              into AI engineering. Each card shows its honest status, and code
+              links appear once a repository is public.
+            </p>
+          </header>
+
+          <div
+            class="filters"
+            id="project-filters"
+            role="group"
+            aria-label="Filter projects by category"
+            hidden
+          >
+            <button
+              class="filter-btn"
+              type="button"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn"
+              type="button"
+              data-filter="web"
+              aria-pressed="false"
+            >
+              Web Development
+            </button>
+            <button
+              class="filter-btn"
+              type="button"
+              data-filter="ai"
+              aria-pressed="false"
+            >
+              AI Engineering
+            </button>
+          </div>
+          <p class="projects__count" id="project-count" role="status"></p>
+
+          <div class="project-grid" id="project-grid">
+            <noscript>
+              <ul class="noscript-list">
+                <li>
+                  <strong>PDF Chat with RAG</strong> (Planned): document
+                  question-answering grounded in uploaded files.
+                </li>
+                <li>
+                  <strong>Website Knowledge Assistant</strong> (Planned):
+                  answers questions using content retrieved from website pages.
+                </li>
+                <li>
+                  <strong>AI Workflow Agent</strong> (Planned): an agent that
+                  uses controlled tools for multi-step tasks.
+                </li>
+                <li>
+                  <strong>Responsive Personal Portfolio</strong> (In Progress):
+                  this website.
+                </li>
+              </ul>
+            </noscript>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Learning Journey ================= -->
+      <section
+        class="section section--alt"
+        id="journey"
+        aria-labelledby="journey-title"
+      >
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-eyebrow">
+              <span aria-hidden="true">04 /</span> Learning Journey
+            </p>
+            <h2 class="section-title" id="journey-title">
+              How I got here, and where I'm heading
+            </h2>
+            <p class="section-lead">
+              Learning milestones, from my first lines of code to what I'm
+              working towards next.
+            </p>
+          </header>
+
+          <ol class="timeline">
+            <li class="timeline__item reveal">
+              <span class="timeline__marker" aria-hidden="true"></span>
+              <div class="timeline__card">
+                <p class="timeline__label"><time datetime="2023">2023</time></p>
+                <h3 class="timeline__title">
+                  Started with full-stack web development
+                </h3>
+                <p class="timeline__text">
+                  Began learning software development by building for the web,
+                  front to back.
+                </p>
+              </div>
+            </li>
+            <li class="timeline__item reveal">
+              <span class="timeline__marker" aria-hidden="true"></span>
+              <div class="timeline__card">
+                <p class="timeline__label">Foundation</p>
+                <h3 class="timeline__title">
+                  Frontend, APIs and programming fundamentals
+                </h3>
+                <p class="timeline__text">
+                  Developed a real interest in frontend development, backend
+                  APIs, and programming as a craft.
+                </p>
+              </div>
+            </li>
+            <li class="timeline__item reveal">
+              <span class="timeline__marker" aria-hidden="true"></span>
+              <div class="timeline__card">
+                <p class="timeline__label">Current focus</p>
+                <h3 class="timeline__title">Python and AI engineering</h3>
+                <p class="timeline__text">
+                  Expanding my Python skills and exploring LLM applications, RAG
+                  and AI agents.
+                </p>
+              </div>
+            </li>
+            <li class="timeline__item timeline__item--next reveal">
+              <span class="timeline__marker" aria-hidden="true"></span>
+              <div class="timeline__card">
+                <p class="timeline__label">Next goal</p>
+                <h3 class="timeline__title">
+                  Build, document, test and publish
+                </h3>
+                <p class="timeline__text">
+                  Ship practical projects on GitHub with clear documentation and
+                  tests.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ================= Current Focus ================= -->
+      <section class="section" id="focus" aria-labelledby="focus-title">
+        <div class="container">
+          <div class="focus-panel">
+            <header class="section-header reveal">
+              <p class="section-eyebrow">
+                <span aria-hidden="true">05 /</span> Current Focus
+              </p>
+              <h2 class="section-title" id="focus-title">
+                What I'm exploring right now
+              </h2>
+            </header>
+
+            <ul class="focus__grid">
+              <li class="focus-card reveal">
+                <span class="focus-card__icon" aria-hidden="true"
+                  ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                    <rect x="2" y="4" width="14" height="11" rx="2" />
+                    <path d="M6 19h6M9 15v4" />
+                    <rect x="17" y="8" width="5" height="11" rx="1.5" /></svg
+                ></span>
+                <h3 class="focus-card__title">Responsive web applications</h3>
+                <p class="focus-card__text">
+                  Interfaces that work well on any screen, built on semantic
+                  HTML, CSS and JavaScript.
+                </p>
+              </li>
+              <li class="focus-card reveal">
+                <span class="focus-card__icon" aria-hidden="true"
+                  ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                    <rect x="4" y="4" width="16" height="7" rx="2" />
+                    <rect x="4" y="13" width="16" height="7" rx="2" />
+                    <path d="M8 7.5h.01M8 16.5h.01" /></svg
+                ></span>
+                <h3 class="focus-card__title">
+                  Backend APIs with Python &amp; FastAPI
+                </h3>
+                <p class="focus-card__text">
+                  Designing clear, well-structured APIs with validation and
+                  sensible error handling.
+                </p>
+              </li>
+              <li class="focus-card reveal">
+                <span class="focus-card__icon" aria-hidden="true"
+                  ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                    <path d="M4 5h16v11H9l-5 4z" />
+                    <path d="M8 9h8M8 12h5" /></svg
+                ></span>
+                <h3 class="focus-card__title">Integrating LLM APIs</h3>
+                <p class="focus-card__text">
+                  Learning how language models are called from real
+                  applications, and how to handle their output reliably.
+                </p>
+              </li>
+              <li class="focus-card reveal">
+                <span class="focus-card__icon" aria-hidden="true"
+                  ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                    <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5" />
+                    <path d="M14 3v5h5M8 9h3M8 13h5" />
+                    <circle cx="17" cy="16" r="3" />
+                    <path d="m21 20-1.8-1.8" /></svg
+                ></span>
+                <h3 class="focus-card__title">RAG &amp; grounded answers</h3>
+                <p class="focus-card__text">
+                  Retrieving relevant source material so answers stay tied to
+                  real documents.
+                </p>
+              </li>
+              <li class="focus-card reveal">
+                <span class="focus-card__icon" aria-hidden="true"
+                  ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                    <circle cx="12" cy="5" r="2.5" />
+                    <circle cx="5" cy="19" r="2.5" />
+                    <circle cx="19" cy="19" r="2.5" />
+                    <path d="M11 7.3 6.2 16.8M13 7.3l4.8 9.5M7.5 19h9" /></svg
+                ></span>
+                <h3 class="focus-card__title">
+                  AI agents &amp; controlled tool use
+                </h3>
+                <p class="focus-card__text">
+                  Experimenting with agents that call well-defined tools to
+                  finish multi-step tasks.
+                </p>
+              </li>
+              <li class="focus-card reveal">
+                <span class="focus-card__icon" aria-hidden="true"
+                  ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                    <path
+                      d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6z"
+                    />
+                    <path d="m9 12 2 2 4-4" /></svg
+                ></span>
+                <h3 class="focus-card__title">Code quality &amp; deployment</h3>
+                <p class="focus-card__text">
+                  Improving testing, documentation and deployment so projects
+                  are easy to trust and maintain.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Contact ================= -->
+      <section
+        class="section section--alt"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container contact__grid">
+          <div class="contact__intro reveal">
+            <p class="section-eyebrow">
+              <span aria-hidden="true">06 /</span> Contact
+            </p>
+            <h2 class="section-title" id="contact-title">Let's connect</h2>
+            <p class="section-lead">
+              I'm always happy to talk about web development, AI engineering, or
+              learning opportunities. Whether you're a recruiter, a fellow
+              developer, or just curious about a project, feel free to reach
+              out.
+            </p>
+
+            <ul class="contact-links">
+              <li>
+                <a
+                  class="contact-link"
+                  href="https://github.com/SikirullahO"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="contact-link__icon" aria-hidden="true"
+                    ><svg
+                      class="icon icon--fill"
+                      viewBox="0 0 24 24"
+                      focusable="false"
+                    >
+                      <path
+                        d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+                      /></svg
+                  ></span>
+                  <span class="contact-link__text">
+                    <span class="contact-link__label">GitHub</span>
+                    <span class="contact-link__value"
+                      >github.com/SikirullahO</span
+                    >
+                  </span>
+                  <span class="visually-hidden"> (opens in a new tab)</span>
+                </a>
+              </li>
+              <li>
+                <span
+                  class="contact-link contact-link--placeholder"
+                  data-social="linkedin"
+                >
+                  <span class="contact-link__icon" aria-hidden="true"
+                    ><svg
+                      class="icon icon--fill"
+                      viewBox="0 0 24 24"
+                      focusable="false"
+                    >
+                      <path
+                        d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"
+                      /></svg
+                  ></span>
+                  <span class="contact-link__text">
+                    <span class="contact-link__label">LinkedIn</span>
+                    <span class="contact-link__value" data-social-value
+                      >Profile link coming soon</span
+                    >
+                  </span>
+                </span>
+              </li>
+              <li>
+                <span
+                  class="contact-link contact-link--placeholder"
+                  data-social="email"
+                >
+                  <span class="contact-link__icon" aria-hidden="true"
+                    ><svg class="icon" viewBox="0 0 24 24" focusable="false">
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <path d="m3 7 9 6 9-6" /></svg
+                  ></span>
+                  <span class="contact-link__text">
+                    <span class="contact-link__label">Email</span>
+                    <span class="contact-link__value" data-social-value
+                      >Email address coming soon</span
+                    >
+                  </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <form
+            class="contact-form reveal"
+            id="contact-form"
+            data-endpoint=""
+            novalidate
+          >
+            <p class="form-notice" id="form-notice">
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 8h.01M11 12h1v4h1" />
+              </svg>
+              <span
+                ><strong>Demo form.</strong> It checks your input but isn't
+                connected to an email service yet, so messages are not sent.
+                Please reach me on GitHub for now.</span
+              >
+            </p>
+
+            <div class="form-field">
+              <label for="contact-name">Name</label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                aria-describedby="contact-name-error"
+              />
+              <p class="form-error" id="contact-name-error"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">Email</label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                inputmode="email"
+                required
+                aria-describedby="contact-email-error"
+              />
+              <p class="form-error" id="contact-email-error"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="5"
+                required
+                maxlength="2000"
+                aria-describedby="contact-message-error"
+              ></textarea>
+              <p class="form-error" id="contact-message-error"></p>
+            </div>
+
+            <!-- Spam trap: hidden from people, often filled in by bots. -->
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="contact-website">Leave this field empty</label>
+              <input
+                id="contact-website"
+                name="_gotcha"
+                type="text"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
+            <button
+              class="btn btn--primary contact-form__submit"
+              type="submit"
+              disabled
+            >
+              Send message
+            </button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= Footer ================= -->
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="nav__logo" aria-hidden="true">SO</span>
+          <div>
+            <p class="footer__name">Sikirullah Olamide</p>
+            <p class="footer__tagline">
+              Building practical web apps, one project at a time, on the way to
+              AI engineering.
+            </p>
+          </div>
+        </div>
+
+        <ul class="footer__links">
+          <li>
+            <a
+              class="footer__link"
+              href="https://github.com/SikirullahO"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub<span class="visually-hidden">
+                (opens in a new tab)</span
+              ></a
+            >
+          </li>
+          <li>
+            <span
+              class="footer__link footer__link--placeholder"
+              data-social="linkedin"
+              >LinkedIn<span class="visually-hidden" data-placeholder-note>
+                (link coming soon)</span
+              ></span
+            >
+          </li>
+          <li><a class="footer__link" href="#home">Back to top ↑</a></li>
+        </ul>
+
+        <p class="footer__copy">
+          © <span id="year">2026</span> Sikirullah Olamide
+        </p>
+      </div>
+    </footer>
+
+    <a
+      class="back-to-top"
+      id="back-to-top"
+      href="#home"
+      aria-label="Back to top"
+    >
+      <svg
+        class="icon"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </a>
+  </body>
+</html>
